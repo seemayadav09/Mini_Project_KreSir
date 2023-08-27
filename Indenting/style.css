@@ -1,0 +1,37 @@
+#header {
+    background-color:lightblue;
+    text-align:center;
+    padding:0.01px;
+    border: solid lightcoral;
+}
+#section {
+    background-color:orange;
+    text-align:center;
+    padding:5px;
+    border: solid lightcoral;
+}
+#navigation
+{
+    border: solid lightcoral;
+}
+
+h1,h2{
+    color: blue;
+    text-align: center;
+}
+
+.btn-group1 button {
+    background-color: orange; 
+    color: white; 
+    padding: 15px 14px; 
+    cursor: pointer;
+    width: 12%; 
+    display: inline-block; 
+    text-decoration: none;
+}
+
+
+/* Add a background color on hover */
+.btn-group1 button:hover {
+    background-color: #330080;
+}
