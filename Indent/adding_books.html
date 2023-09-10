@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+    <title>Adding Books</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="new_user.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <style>
+    form
+    {
+     height:600px;
+     width:1000px;
+    }
+    label
+        {
+         display:inline-block;
+         width:150px;
+         margin-right:1px;
+         text-align:left;
+         padding: 10px 5px 5px 20px;
+         font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Library Books / Journals Indenting System </h1>
+        <img src="uoh.jpg" alt="University of Hyderabad">
+    </div>
+        <div id="section" align="left" class="btn-group1">
+            <button onclick="window.location.href='new_user.html'">Create New User</button>
+            <button onclick="window.location.href='update_user.php'">Manage Users</button>
+            <button onclick="window.location.href='edit_profile.html'">Edit Profile</button>
+            <button onclick="window.location.href='adding_books.html'">Add Books</button>
+            <button onclick="window.location.href='managing_books.html'">Manage Books</button>
+            <button onclick="window.location.href='adding_journals.html'">Add Journals</button>
+            <button onclick="window.location.href='managing_journals.html'">Manage Journals</button>
+            <button onclick="window.location.href='approve.html'">Approve</button>
+        </div>
+        
+
+            <div id="navigation">
+                <form action="insert_book.php" method="POST">
+                    
+                    <h2>Add New Books's Individually</h2>
+                       
+                    <label for="book_name">BOOK NAME :</label>
+                        <input type="text" id="book_name" name="book_name" size="50" placeholder="enter the book name" required><br>
+                    <label for="author">AUTHOR :</label>
+                        <input type="text" id="author" name="author" size="100" placeholder="author of book" " required><br>
+                    <label for="edition">EDITION :</label>
+                        <input type="text" id="edition" name="edition" size="2" placeholder="enter the edition of book" required><br>
+                    <label for="isbn">ISBN NUMBER :</label>
+                        <input type="text" id="isbn" size="20" name="isbn" placeholder="enter the ISBN number" required><br>
+                    <label for="publisher">PUBLISHER :</label>
+                        <input type="text" id="publisher" name="publisher" size="50" placeholder="publisher name" " required><br>
+                    <label for="year">YEAR OF PUBLICATION :</label>
+                        <input type="number" id="year" name="year" pattern="\d{4}" placeholder="enter year of publication" required><br>
+                    <label for="cost">COST OF BOOK :</label>
+                        <input type="number" id="cost" size="30" name="cost" placeholder="enter the cost of book" required><br>
+                    <label for="field">FIELD OF BOOK:</label>
+                        <input type="text" id="field" name="field" size="30" placeholder="enter the field of book" " required><br>
+                    <div id="button">
+                        <input type="submit" value="submit" id="submit">
+                        <input type="reset" value="Reset">
+                    </div>        
+                </form>  
+            </div>
+            
+            <div id="navigation">
+                <form action="insertion_book.php" method="POST" enctype="multipart/form-data">
+                    
+                    <h2>Bulk Uploading of New Book's</h2>
+                    
+                    <!-- Existing input fields -->
+                    
+                    <label for="csvfile">Upload CSV File:</label>
+                    <input type="file" id="csvfile" name="csvfile" accept=".csv">
+                    
+                    <div id="button">
+                        <input type="submit" value="Submit" id="submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+            </div>   
+</body>
+</html>
+
