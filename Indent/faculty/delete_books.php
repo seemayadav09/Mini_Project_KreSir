@@ -91,11 +91,11 @@
         </div>
     </div>
 
-    <div id="section" align="left" class="btn-group1">
-        <button onclick="window.location.href='suggest_books.html'">Suggest Books</button>
-        <button onclick="window.location.href='suggest_journals.html'">Suggest Journals</button>
+    <div id="section" align="left" class="btn-group1">       
         <button onclick="window.location.href='select_book.php'">Select Books</button>
         <button onclick="window.location.href='select_journal.php'">Select Journals</button>
+        <button onclick="window.location.href='suggest_books.html'">Suggest Books</button>
+        <button onclick="window.location.href='suggest_journals.html'">Suggest Journals</button>
         <button onclick="window.location.href='edit_profile.html'">Edit Profile</button>
         <button onclick="window.location.href='faculty.php'">Logout</button>
     </div>

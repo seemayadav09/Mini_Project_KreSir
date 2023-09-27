@@ -93,21 +93,21 @@
     </div>
   </header>
 
-  <div id="section" align="left" class="btn-group1">
-    <button onclick="window.location.href='suggest_books.html'">Suggest Books</button>
-    <button onclick="window.location.href='suggest_journals.html'">Suggest Journals</button>
-    <button onclick="window.location.href='select_book.php'">Select Books</button>
-    <button onclick="window.location.href='select_journal.php'">Select Journals</button>
-    <button onclick="window.location.href='edit_profile.html'">Edit Profile</button>
-    <button onclick="window.location.href='faculty.php'">Logout</button>
-</div>
+  <div id="section" align="left" class="btn-group1">       
+        <button onclick="window.location.href='select_book.php'">Select Books</button>
+        <button onclick="window.location.href='select_journal.php'">Select Journals</button>
+        <button onclick="window.location.href='suggest_books.html'">Suggest Books</button>
+        <button onclick="window.location.href='suggest_journals.html'">Suggest Journals</button>
+        <button onclick="window.location.href='edit_profile.html'">Edit Profile</button>
+        <button onclick="window.location.href='faculty.php'">Logout</button>
+    </div>
   <!--<body class="bg-dark">-->
   <div class="container">
     <div class="row mt-5">
       <div class="col">
         <div class="card mt-5">
           <div class="card-header">
-            <h2 class="display-6 text-center">Suggest Journals</h2>
+            <h2 class="display-6 text-center">Select and Suggest Journals</h2>
           </div>
           <div class="card-body">
             <table class="table table-bordered text-center">
