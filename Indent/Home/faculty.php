@@ -5,7 +5,7 @@ $port = 3308;
 $user = "root";
 $password = "";
 $db = "indenting";
-$table = "users";
+$table = "create_new_user";
 
 // Connect to MySQL
 $link = mysqli_connect($host, $user, $password, $db);
@@ -41,7 +41,7 @@ if (isset($_POST['login'])) {
                 // Verify the entered password against the stored password
                 if ($password === $user['password']) {
                     // Redirect to the home page or any other desired page
-                    header('Location: new_user.html');
+                    header('Location: suggestions.html');
                     exit();
                 }
             }
@@ -57,64 +57,70 @@ mysqli_close($link);
 ?>
 
 
+
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Admin Login</title>
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <title>Faculty Login</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
     <div id="header">
         <div id="img_left">
             <img src="uoh_logo_white.png" alt="University of Hyderabad">
         </div>
-        <div class="heading">
+        <div id="title">
             <h1>School of Computer and Information Sciences</h1>
             <h2>Library Books / Journals Indenting System</h2>
         </div>
-        
         <div id="img_right">
             <img src="uoh_ioe_white.png" alt="University of Hyderabad">
         </div>
     </div>
+
     <div id="login-section">
-        <div id="section" class="btn-group1">
-            <button onclick="window.location.href='admin.php'">Admin Login</button>
-            <button onclick="window.location.href='faculty.php'">Faculty Login</button>
-        </div>
-        <div id="navigation">
-            <div class="container">
-                <h2><b>Admin Login</b></h2>
+    <div id="section" class="btn-group1">
+        <button onclick="window.location.href='admin1.php'">Admin Login</button>
+        <button onclick="window.location.href='faculty.php'" id="faculty-login-btn">Faculty Login</button>
+    </div>
+    
+    <div id="navigation">
+        <div class="container">
+            <h2><b>Faculty Login</b></h2>
+            <br><br>
+            <?php if (isset($error)) : ?>
+                <p class="error-message"><?php echo $error; ?></p>
+            <?php endif; ?>
+
+            <form method="POST" action="">
+                <label for="username">Username:</label>
+                <input type="text" name="username" placeholder="Enter your email as username" required>
+
+                <label for="password">Password:</label>
+                <div style="position: relative;">
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <span id="password-toggle" class="password-toggle" onclick="togglePasswordVisibility()">
+                        <img src="eye-slash.svg" alt="Toggle Password Visibility">
+                    </span>
+                </div>
                 <br><br>
-                <?php if (isset($error)) : ?>
-                    <p class="error-message"><?php echo $error; ?></p>
-                <?php endif; ?>
-        
-                <form method="POST" action="">
-                    <label for="username">Username:</label>
-                    <input type="text" name="username" placeholder="Enter your email as username" required>
-        
-                    <label for="password">Password:</label>
-                    <div style="position: relative;">
-                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                        <span id="password-toggle" class="password-toggle" onclick="togglePasswordVisibility()">
-                            <img src="eye-slash.svg" alt="Toggle Password Visibility">
-                        </span>
-                    </div>
-                    <br><br>
-        
-                    <center><input type="submit" name="login" value="Admin Login"></center>
-                </form>
-            </div>
+
+                <center><input type="submit" name="login" value="Faculty Login"></center>
+            </form>
         </div>
+
+    </div>
     
-    
+
         <script>
             function togglePasswordVisibility() {
                 var passwordInput = document.getElementById("password");
                 var passwordToggle = document.getElementById("password-toggle");
-    
+
                 if (passwordInput.type === "password") {
                     passwordInput.type = "text";
                     passwordToggle.innerHTML = '<img src="eye.svg" alt="Toggle Password Visibility">';
@@ -124,6 +130,17 @@ mysqli_close($link);
                 }
             }
         </script>
+        <script>
+            // Get the current page URL
+            var currentPage = window.location.href;
+
+            // Check if the current page URL matches the "new_user.html" URL
+            if (currentPage.includes("faculty.php")) {
+                // Add the "active" class to the button
+                document.getElementById("faculty-login-btn").classList.add("active");
+            }
+        </script>
+
 </body>
 </html>
 

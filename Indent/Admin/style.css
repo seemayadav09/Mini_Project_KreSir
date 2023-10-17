@@ -57,6 +57,9 @@ body {
     cursor: pointer;
     font-size: 16px;
 }
+.btn-group1 button:active{
+    background-color: #ff0000;
+}
 
 .btn-group1 button:hover {
     background-color: #6a819c;
@@ -73,11 +76,7 @@ body {
     
 
 } 
-.container h2{
-    direction: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 
 label {
@@ -123,3 +122,15 @@ input[type="submit"]:hover {
     transform: translateY(-50%);
     cursor: pointer;
 }
+
+#admin-login-btn.active {
+    background-color: #03213f;
+}
+#faculty-login-btn.active {
+    background-color: #03213f;
+}
+h2{
+    text-align: center;
+}
+
+

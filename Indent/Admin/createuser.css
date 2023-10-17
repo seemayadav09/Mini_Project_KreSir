@@ -1,0 +1,89 @@
+#form-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+#navigation-left{
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 10px 14px rgba(21, 19, 19, 0.648);
+    width: 400px;
+    margin-top: 30px;
+    
+    
+
+} 
+#navigation-right{
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 10px 14px rgba(21, 19, 19, 0.648);
+    width: 400px;
+    margin-top: 50px;
+    border: dotted;
+    border-color: rgb(75, 75, 75);
+}
+
+.forms{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:23px;
+}
+input[type="text"],
+input[type="password"] {
+    /* ... (other styles) ... */
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    /* Adjust padding here */
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    /* Adjust font size here */
+}
+
+input[type="reset"] {
+    margin-left: 10px;
+    /* Adjust the margin as needed */
+}
+
+input[type="submit"]:hover {
+    background-color: #00285585;
+}
+
+input[type="reset"]:hover {
+    background-color: #00285585;
+}
+
+.error-message {
+    color: #ff0000;
+    margin-top: 10px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#button {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
