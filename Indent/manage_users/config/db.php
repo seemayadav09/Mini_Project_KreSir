@@ -1,6 +1,6 @@
 <?php 
 
-  $con = mysqli_connect("localhost","root","","bank","3308");
+  $con = mysqli_connect("localhost","root","","bank");
 
   if(!$con){
     die("Connection Error");

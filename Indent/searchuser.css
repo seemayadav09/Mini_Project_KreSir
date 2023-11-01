@@ -2,9 +2,15 @@
     text-align: center;
 
 }
-
+.search{
+    width: 300px;
+}
 .error-message {
     color: #ff0000;
     margin-top: 10px;
 }
 
+#navigation-search form{
+    margin: auto;
+    width: 500px;
+}

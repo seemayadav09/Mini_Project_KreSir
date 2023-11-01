@@ -1,6 +1,6 @@
 <?php 
 
-  $con = mysqli_connect("localhost","root","","indenting","3308");
+  $con = mysqli_connect("localhost","root","","indenting");
 
   if(!$con){
     die("Connection Error");

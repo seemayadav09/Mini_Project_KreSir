@@ -41,7 +41,7 @@ if (isset($_POST['login'])) {
                 // Verify the entered password against the stored password
                 if ($password === $user['password']) {
                     // Redirect to the home page or any other desired page
-                    header('Location: new_user.html');
+                    header('Location: admin_home.php');
                     exit();
                 }
             }
